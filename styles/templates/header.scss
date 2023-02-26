@@ -1,0 +1,51 @@
+.pre-header {
+  width: 100%;
+  padding: 16px 18px;
+  background-color: $grey;
+  @include flex-box();
+  column-gap: 30px;
+  &__item {
+    text-decoration: none;
+    color: $black;
+  }
+}
+
+.header-main {
+  padding: 20px 0;
+  &__container {
+    @include flex-box(space-between);
+  }
+  &__logo {
+    @include flex-box();
+    @include bold(36px);
+    color: $green;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+}
+
+.header-nav {
+  padding: 30px 18px;
+  border-top: 1px solid #EFEFEF;
+  @include flex-box();
+  grid-gap: 40px;
+  &__link {
+    @include regular(16px);
+    color: #000;
+  }
+}
+
+.call {
+  @include flex-box();
+  &-number {
+    @include regular(16px);
+    margin-right: 40px;
+    color: #000;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  &-btn {
+    @include std-button();
+  }
+}

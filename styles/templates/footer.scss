@@ -1,0 +1,40 @@
+.footer {
+  &__container {
+    @include flex-box(space-between);
+  }
+}
+
+.footer-main {
+  padding: 38px 0;
+  &__socials {
+    @include flex-box();
+  }
+  &__socials-btn {
+    @include std-button(45px, 45px, $green);
+    margin-right: 20px;
+    &#facebook-btn {
+      margin-right: 16px;
+    }
+    &#instagram-btn {
+      margin-right: 100px;
+    }
+  }
+  &__location {
+    color: #000;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.footer-confident {
+  padding: 25px 0;
+  background-color: $grey;
+  color: #828282;
+  &__copyright {
+    font-size: 12px;
+  }
+  &__link:hover {
+    text-decoration: underline;
+  }
+}

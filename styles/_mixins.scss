@@ -1,0 +1,45 @@
+
+@mixin flex-box($justify: center, $align: center) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin bold($fz) {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: $fz;
+}
+
+@mixin medium($fz) {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: $fz;
+}
+
+@mixin regular($fz) {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: $fz;
+}
+
+@mixin reset-button-styles() {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background: none;
+  cursor: pointer;
+}
+
+@mixin std-button($width: 170px, $height: 40px,$border-color: #66C05D, $border-radius: 40px) {
+  @include reset-button-styles();
+  @include flex-box();
+  width: $width;
+  height: $height;
+  border-width: 2px;
+  border-style: solid;
+  border-color: $border-color;
+  border-radius: $border-radius;
+
+}

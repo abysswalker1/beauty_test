@@ -1,0 +1,46 @@
+.main {
+  background-color: $green;
+  height: 604px;
+  overflow: clip;
+  &__container {
+    @include flex-box(space-between);
+    height: 100%;
+  }
+  &__info {
+    color: #fff;
+    &-title {
+      @include bold(48px);
+      white-space: nowrap;
+    }
+    &-text {
+      @include regular(14px);
+      max-width: 308px;
+      margin-block-end: 50px;
+    }
+    &-btn {
+      @include std-button(170px, 40px, white, 40px);
+      @include regular(14px);
+      letter-spacing: 0.05em;
+    }
+  }
+  &__composition {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  &__circle {
+    @include flex-box();
+    aspect-ratio: 2 / 2;
+    border-radius: 50%;
+    &.big-circle {
+      position: absolute;
+      left: 0;top: -20%;
+      width: 860px;
+      background: rgba(255, 255, 255, 0.3);
+    }
+    &.small-circle {
+      width: 677px;
+      background: rgba(255, 255, 255, 0.4);
+    }
+  }
+}

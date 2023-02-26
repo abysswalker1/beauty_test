@@ -1,0 +1,32 @@
+@import 'mixins';
+@import 'variables';
+
+@import "templates/header";
+@import "templates/main";
+@import "templates/offers";
+@import "templates/footer";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  @include regular(14px);
+  margin: 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 18px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+input {
+  all: unset
+}
